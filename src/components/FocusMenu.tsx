@@ -17,7 +17,7 @@ export default function FocusMenu() {
 
   return (
     <>
-      <Menu mode="inline" theme="dark" defaultSelectedKeys={[1]}>
+      <Menu mode="inline" theme="dark" defaultSelectedKeys={["1"]}>
         {mappedMenus}
       </Menu>
     </>
