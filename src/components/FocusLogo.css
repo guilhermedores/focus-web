@@ -1,0 +1,44 @@
+.logoContainer {
+  display: block;
+}
+
+.letterF {
+  color: var(--cor-roxo);
+  font-size: 5rem;
+  font-family: Antonio;
+  margin-top: 20px;
+}
+
+.letterO {
+  color: var(--cor-branca);
+  font-size: 5rem;
+  font-family: Antonio;
+}
+
+.letterC {
+  color: var(--cor-roxo);
+  font-size: 5rem;
+  font-family: Antonio;
+}
+
+.letterU {
+  color: var(--cor-branca);
+  font-size: 5rem;
+  font-family: Antonio;
+}
+
+.textoContainer {
+  margin-top: 2rem;
+}
+
+.letterS {
+  color: var(--cor-roxo);
+  font-size: 5rem;
+  font-family: Antonio;
+}
+
+.texto {
+  color: var(--cor-roxo);
+  font-size: 1.5rem;
+  font-family: Antonio;
+}

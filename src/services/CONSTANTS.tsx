@@ -1,0 +1,1 @@
+export const urlBase = "https://focus-sala-de-estudos-backend.herokuapp.com";
