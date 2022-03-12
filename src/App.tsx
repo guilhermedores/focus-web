@@ -7,7 +7,7 @@ import FocusMenu from './components/FocusMenu'
 import Login from './pages/Login'
 import useToken from "./hooks/useToken";
 
-import './App.less';
+import './App.css';
 
 const { Content, Sider, Footer } = Layout;
 
@@ -40,7 +40,7 @@ function App() {
         </Content>
       </Layout>
     </>
-  );
+  )
 }
 
 export default App;

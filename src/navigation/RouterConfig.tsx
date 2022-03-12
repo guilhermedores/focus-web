@@ -18,5 +18,5 @@ export const RouterConfig = () => {
         </Routes>
       </Suspense>
     </Router>
-  );
-};
+  )
+}
