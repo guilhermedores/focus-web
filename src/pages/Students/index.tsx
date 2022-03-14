@@ -1,27 +1,28 @@
 import DataTable  from '../../components/DataTable'
-import { useState, useEffect } from 'react'
+import { useEffect, useCallback } from 'react'
+import { retrieveStudents } from '../../redux/actions/students'
+import { connect, useSelector, useDispatch } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
-import { getAllStudents } from '../../services/'
+export default function StudentPage() { 
 
-const StudentPage = () => {
-
-  const [Students, setStudents] = useState(getAllStudents)  
+  const students = useSelector((state: any) => state.students);
+  const dispatch = useDispatch();
+  const retrieveStudentsList = useCallback(() =>  dispatch(retrieveStudents()), []);
 
   useEffect(() => {
-    //setStudents(getAllStudents)
-  })
+    retrieveStudentsList();
+  },[])  
 
   const columns = [
     { title : 'Nome', key : 'name',  type: 'text'},
     { title : 'Email', key : 'email',  type: 'text'},
-    { title : 'Data de nascimento', key : 'birthDate', type: 'date' } 
+    { title : 'Data de nascimento', key : 'birthDate', type: 'date' }
   ]
 
   return (
     <>
-      <DataTable dataSource={Students} columns={columns} />
+      <DataTable dataSource={students} columns={columns} />
     </>
   )
 }
-
-export default StudentPage

@@ -8,7 +8,7 @@ import { Layout } from 'antd';
 
 import './index.css';
 import FocusLogo from '../../components/FocusLogo';
-import { loginUser } from '../../services'
+import { loginUser } from '../../redux/services'
 
 export default function Login(props:any) {  
 

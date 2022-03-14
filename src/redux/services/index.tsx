@@ -1,3 +1,3 @@
 export { loginUser } from './loginService';
 export { getAllMenus } from './menuService';
-export { getAllStudents } from './studentsService';
+export { getAll as getAllStudents } from './studentsService';

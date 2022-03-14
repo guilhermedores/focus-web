@@ -1,4 +1,4 @@
-import Credentials from 'pages/Login/credentials';
+import Credentials from '../../pages/Login/credentials';
 import API from './axiosConfig'
 
 export const loginUser = async (credentials: Credentials) => { 

@@ -1,9 +1,8 @@
 import React from 'react';
 import { Menu } from 'antd';
-
 import { MenuUnfoldOutlined } from '@ant-design/icons';
-
-import { getAllMenus } from "../services";
+import { getAllMenus } from "../redux/services";
+import { Link } from 'react-router-dom'
 
 export default function FocusMenu() {
   
@@ -11,13 +10,13 @@ export default function FocusMenu() {
 
   const mappedMenus = menus.map((menu, index) => 
       <Menu.Item key={index} icon={<MenuUnfoldOutlined/>}>
-        <a href={menu.path}>{menu.description}</a>
+        <Link to={menu.path}>{menu.description}</Link>
       </Menu.Item>
   );
 
   return (
     <>
-      <Menu mode="inline" theme="dark" defaultSelectedKeys={["1"]}>
+      <Menu mode="inline" defaultSelectedKeys={['0']}>
         {mappedMenus}
       </Menu>
     </>

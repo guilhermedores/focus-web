@@ -25,3 +25,7 @@ body {
   background-repeat: no-repeat;
   background-position: right;
 }
+
+.site-layout-background {
+  background: #fff;
+}

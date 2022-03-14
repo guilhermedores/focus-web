@@ -6,6 +6,7 @@ import { Layout } from 'antd';
 import FocusMenu from './components/FocusMenu'
 import Login from './pages/Login'
 import useToken from "./hooks/useToken";
+import { BrowserRouter as Router} from 'react-router-dom';
 
 import './App.css';
 
@@ -25,20 +26,22 @@ function App() {
   }  
 
   return (
-    <>    
-      <Layout style={{ minHeight: '100vh' }}>
-        <Sider collapsible collapsed={collapsed} onCollapse={onHadlerCollapse}>
-          <FocusMenu/>
-        </Sider>
-        <Content style={{ margin: '10px 16px' }}>
-          <div style={{ padding: 24, minHeight: 700 , backgroundColor: '#fff' }}>
-            {<RouterConfig/>}
-          </div>          
-          <Layout>
-            <Footer style={{ textAlign: 'center' }}>Criado por Guilherme Batista das Dôres</Footer>
-          </Layout>
-        </Content>
-      </Layout>
+    <>
+      <Router>
+        <Layout style={{ minHeight: '100vh' }}>
+          <Sider collapsible collapsed={collapsed} onCollapse={onHadlerCollapse} className='site-layout-background'>
+            <FocusMenu/>
+          </Sider>
+          <Content style={{ margin: '10px 16px' }}>
+            <div style={{ padding: 24, minHeight: 700 , backgroundColor: '#fff' }}>
+              {<RouterConfig/>}
+            </div>          
+            <Layout>
+              <Footer style={{ textAlign: 'center' }}>Criado por Guilherme Batista das Dôres</Footer>
+            </Layout>
+          </Content>
+        </Layout>
+      </Router>
     </>
   )
 }

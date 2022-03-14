@@ -23,12 +23,12 @@ export default function DataTable(props : any) {
   function defineSorter (type: string, key : string , obja:any, objb: any)
   {
     switch(type) {
-      case 'date' : return (new Date(obja[key])) < (new Date(objb[key])); break;
+      case 'date' : return moment(obja[key]).isBefore(moment(objb[key]));
       default : {
         if(obja[key] < objb[key]) { return -1; }
         if(obja[key] > objb[key]) { return 1; }
         return 0;
-      } break;
+      }
     }
   }
 
