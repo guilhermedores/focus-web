@@ -1,5 +1,5 @@
-import { students } from '../../mocks/students'
+import API from  './axiosConfig'
 
 export const getAll = async () => {
-  return students
+  return await API.get('/v1/student')
 }

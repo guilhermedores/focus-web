@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux'
 
 export default function StudentPage() { 
 
-  const students = useSelector((state: any) => state.students);
+  const students = useSelector((state: any) => state.students.data);
   const dispatch = useDispatch();
   const retrieveStudentsList = useCallback(() =>  dispatch(retrieveStudents()), []);
 
